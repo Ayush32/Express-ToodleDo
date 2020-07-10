@@ -1,0 +1,307 @@
+body,html{
+    margin: 0;
+
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+    overflow-x: hidden;
+    /* height:100%; */
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+/*  from section starting */
+/* main container */
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 575px;
+    height: 47vh;
+    background-color: whitesmoke;
+    margin-left:30%;
+    box-sizing: border-box;
+    opacity: 0.7;
+   
+    margin-top: 5px!important;
+    /* padding: px; */
+    border-radius: 4px;
+}
+.main-container:hover{
+    opacity: 0.8;
+
+}
+/* main form container */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+/*top form heading  */
+.heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 8.5rem; 
+    /* color: rgb(255, 0, 0); */
+}
+
+/* custom icon class in heading */
+ .head{
+    font-size: 40px;
+    margin-top: -10px;
+     background-color: #f71735;
+     background-image: linear-gradient(147deg, #f71735 0%, #f10018 74%);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     }
+/* heading h1 in heading class */
+.heading h1{
+    font-size: 35px;
+    padding: 0 5px;
+    background-color: #f71735;
+    background-image: linear-gradient(147deg, #f71735 0%, #ec0018 74%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* top horizontal line */
+.horizontal-line {
+    width: 545px;
+    height: 1px;
+    background-color: rgb(255, 217, 0);
+    display: inline;
+    vertical-align: middle;
+    margin-right: 14px;
+    margin-left: 14px;
+    margin-top: 2px;
+    padding: 0px;
+}
+
+.ml9 .letters {
+    transform-origin: 50% 100%;
+   
+}
+
+/* styling textarea */
+textarea {
+    margin-left: 5px !important;
+    outline: none !important;
+    border-style: none !important;
+    text-decoration: none !important;
+    border: 1px solid rgb(226, 226, 226) !important;
+}
+/* end */
+
+/* textarea heading  */
+#desc-heading {
+    padding: 5px 16px;
+    font-size: 15px;
+    font-weight: 600;
+    color: grey;
+    text-transform: uppercase;
+}
+/* both input tags class */
+.category-date{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 25px 40px;
+    margin: 0 2rem;
+    /* margin-right: 4rem; */
+}
+/* end  */
+
+/* select input tag styling */
+select{
+    width: 200px;
+    height: 36px;
+    /* min-width: 250px; */
+    border-style: none;
+    padding: 0 8px;
+    outline: none;
+    border: 1px solid rgb(207, 207, 207);
+     margin-right: 18px;
+    font-size: 15px!important;
+}
+/* end */
+
+/* input date i using custom jquery datepicker to choose date */
+
+input[type="text"]{
+    margin-left: 10px;
+    outline: none;
+    text-decoration: none;
+    padding: 0px 5px;
+    height: 37px;
+    /* margin-right: 5px; */
+    border-style: none;
+    border: 1px solid rgb(207,207,207);
+    /* margin-top: 2px; */
+    border-radius: 4px;
+    color: rgb(122, 122, 122);
+}
+/* end */
+
+
+/* the verticle line between category dropdown and due date input */
+.vertical-line {
+    width: 1px;
+    height: 50px;
+     background-color: rgb(255, 217, 0);
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+    margin-left: 28px;
+    margin-top: -6px;
+    padding: 0px;
+}
+/* end */
+
+/* input[type="date"]{
+    margin-right: 2rem;
+} */
+
+
+/* task class button which submit the task */
+.task-action{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* end */
+/* button to submit the task  */
+
+button[type="submit"]{
+    width: 120px;
+    height: 40px;
+    margin-top: 1px;
+    margin-right: 18px;
+    font-size: 14px;
+    font-weight: 550;
+    text-transform: uppercase;
+    color: white;
+    background-color:rgb(12, 180, 12);
+    outline: none;
+    border-style: none;
+    border-radius: 4px;
+    outline: none;
+}
+/* end */
+
+/* button  plus icon */
+button i{
+    padding: 0 1px;
+    margin-right: 5px;
+    color: white;
+    font-size: 14px;
+}
+/* end */
+
+/* end main container section or -----> form  */
+
+/* starting adding task section  */
+
+/* main task conatiner */
+.todo-tasklist{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: -15px;
+}
+/* end */
+/* using unordered list */
+ul{
+    list-style: none;
+    height: 100vh;
+    /* min-height: 100vh; */
+    overflow-y: hidden;
+    padding: auto;
+    margin: auto;
+}
+/* hide the scrollbar of ul */
+ul::-webkit-scrollbar {
+    visibility: hidden;
+}
+/* style every li tag */
+li {
+    display: flex;
+    flex-wrap: wrap;
+    width: 576px;
+    background-color:rgb(243, 243, 243);
+    /* justify-content: space-between; */
+    opacity: 0.7;
+    align-items: center;
+    margin: 8px;
+    margin-left: -16px;
+    border-radius: 4px;
+    padding: 10px;
+    transition: box-shadow ease-in-out 0.1s;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+   
+}
+/* on hover the opacity of li will 1 */
+li:hover{
+    opacity: 0.8;
+    box-shadow: 0 0 3px 3px white;
+}
+/* end */
+/* img  */
+.img a img{
+    width: 25px;
+    height: 25px;
+
+}
+/* end */
+
+/* button styling */
+.category-btn{
+    float: right;
+    margin-left: 27rem;
+
+    display: flex;
+    /* justify-content: left; */
+    align-items: center;
+   
+    padding: 5px 25px;
+    text-align: center;
+    color: white;
+    border-radius: 3px!important;
+    /* background-color: blueviolet; */
+    position: absolute;
+    outline: none!important;
+    border-style: none!important;
+    
+}
+/* description heading in tasklist */
+.description
+{
+    margin-left: 3rem;
+    font-size:15px;
+    font-weight: 700;
+}
+/* end */
+/* text on the button */
+.text{
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: 15px;
+    color: rgb(138, 138, 138);
+
+}
+/* setting calendar image  width and height and margin in tasklist */
+.img-cal img{
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    margin-top: -16px;
+
+}

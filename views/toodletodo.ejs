@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= titleName %></title>
+
+    <!-- favicon icon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAC1ElEQVRoge2Yv27TUBTGv2MnzR8rUkPVKYUKKQ8ADwBCDEhtEDtCLAwZkGBi6sTIgMTawAsgMTVQEGKCB8iCEEvF0k5I0KLESUrjexgSFMe+9r2OHaeDv8n2/e455+drXx8ZyJQpU6ZMMUTeC7VH3GBGC4RapEA8Dkae86DjOXxHBDS/vqIP7rw5byEM7MqKp8mgKvkCfRsEtABcCgUgxsYSi1T5Lnrr9QHkhTqobyzgWNenHVsifYCYRSbl0wbQCWoUGcbNPvhHHvi+kgrMfACTiTNBSwy+ZQOrAgYD5rcVuU9WmNsXMkfm0wNQBOUiw5kUT38MrHwqwxDJFRnmiwQgrpyCN0fIfyyDBjQOVGQMt2xwVcA4NlDat2AMyJc8sLCYMJEAhpsjiDUHZ1s2yvsWiIH+tg1RFTCPDVTeWlOwkOS6MDo+NYAzNebfl9G7bcOpCgwaNsCAUxXI/Taw2p4t/v+cnw+6EMWA9Y4oc0io71YiAoipmXqE6p6Fkzs2RhfGA7kTA2ttC6ZNU1/A8iYh9w2NDsAAbML6noVfjT4AYP1dGaZNM0Hdd+hyq+L7OMl8gT2QwqcP4J7YI9ReW/KEkuRKX8SGzgsWHSBG8kXAqAGWXGQsgJzwBGLgzdUDnOYcAEBhZOJup+5PODnuPO5iVEpmF8oPCDeeV0IbusDvQNiLo1qlJCXL5Zbv2sNtZulX0nOeVncKzK70zmeaqXmudnpZMNq70CKTx/XpAyyom4zr0wZwB31x7QCDyS5UOjPx5Es9MHl7p4u/5WR2oUKfcO9pJfDxCQZQkEtXCUh8JyJJLplnRs+uM4e1tYTgsTR89zuqXcgJD+rd2tKG8Sr4HdAImorPM0cLIGrQNH36AOe0oYsMcN5g4gPMk1xjTpTYagCNoL6xlHxKgJzAEbn/UC8ZxqNDJUDBQZOBlzT+H59K16mpQ0Fo6tszZcqUKZOG/gF/MvQEAtRrpAAAAABJRU5ErkJggg==">
+    <!-- Font Awesome Css  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+
+    <!-- link css file -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- link responsive css file -->
+    <link rel="stylesheet" href="/css/responsive.css" />
+
+    <!-- jquery ui script tag -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- using the jquiry ui for date input using calender -->
+    <!-- jqueryui -->
+    <link
+      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <!-- using anime.js for animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="heading">
+        <!-- <div class="heading-icon"> -->
+        <i class="fas fa-edit head"></i>
+        <!-- </div> -->
+            <!-- custom animation class  -->
+        <h1 class="ml2">
+          ToodleDo-App
+        </h1>
+      </div>
+
+    <!--  horizontal line below the heading -->
+      <div class="horizontal-line"></div>
+      <!-- main form container -->
+      <div class="form-container">
+          <!-- from post for created task -->
+        <form action="/create-task" method="POST">
+          <div class="input-field">
+            <div id="desc-heading">
+              Description
+            </div>
+
+            <!-- textarea using bootstrap class -->
+            <textarea
+              class="form-control"
+              name="description"
+              placeholder="What do you need to do?"
+              id="exampleFormControlTextarea1"
+              rows="1"
+            ></textarea>
+          </div>
+          <!-- different category  -->
+          <div class="category-date">
+              <!-- select class -->
+            <div class="select-category">
+              <!-- <div id="cate-heading"> 
+                            Category
+                        </div> -->
+                        <!-- select tag for choosing category -->
+              <select
+                class="custom-select bg-light"
+                id="inputGroupSelect01"
+                name="category"
+                id=""
+                aria-placeholder="Choose a Category"
+              >
+                <option selected>Choose a Category</option>
+                <option value="Personal">Personal</option>
+                <option value="Work">Work</option>
+                <option value="Cleaning">Cleaning</option>
+                <option value="School">School</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <!-- vertical line  -->
+            <div class="vertical-line"></div>
+            <!-- date class -->
+            <div class="due-date">
+              <!-- <div id="date-heading">Due Date</div> -->
+              <!-- input date tag for choosing date -->
+              <input
+                type="text"
+                name="due_date"
+                placeholder="Due Date"
+                id="my_date_picker"
+                autocomplete="off"
+                class="mb-2"
+              />
+            </div>
+          </div>
+
+          <div class="task-action">
+            <button type="submit"><i class="fas fa-plus"></i>Add Task</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <br />
+<!-- created for tasklist main class -->
+    <div class="todo-tasklist">
+        <!-- showing task in the form of list -->
+      <ul>
+          <!-- loop for iterate on the tasklist -->
+        <% let count=0; for(let t of task_list){ %>
+        <li>
+            <!-- deleted link for deleting task dynamically from the database -->
+          <div class="img">
+            <a href="/delete-task/?id=<%= t._id %>"
+              ><img
+                src="https://img.icons8.com/color/48/000000/delete-forever.png"
+            /></a>
+          </div>
+          <!-- if description is empty which is given by the user then "No Description Added" is show on the taskList and else description is in tasklist  -->
+
+          <div class="description">
+            <% if(t.description.length==0){ %> <%="No Description Added" %> <% }
+            else { %> <%= t.description %> <% } %>
+
+             <!-- if the date is empty which is given by the user then "No  Deadline" is show on the taskList and else date  show  in tasklist  -->
+
+            <div class="text">
+              <% if(t.due_date==null){ %> <%="NO DEADLINE" %> <% } else { %> <%=
+              t.due_date %> <% } %>
+            </div>
+            <!-- calendar image  -->
+            <div class="img-cal">
+              <img src="https://img.icons8.com/fluent/48/000000/calendar.png" />
+            </div>
+          </div>
+                      <!-- different category is added when user add the task with different color -->
+
+
+          <div class="logo btn btn-primary category-btn">
+            <%=t.category%>
+          </div>
+        </li>
+
+        <% count++;} %>
+      </ul>
+    </div>
+
+    <!-- script for datepicker UI -->
+
+    <script>
+      $(document).ready(function () {
+        $(function () {
+          $("#my_date_picker").datepicker();
+        });
+      });
+    </script>
+
+    <!-- script file for vanta.js -->
+
+    <script type="text/javascript" src="./js/three.r95.min.js"></script>
+    <script type="text/javascript" src="./js/vanta.net.min.js"></script>
+
+    <script>
+      VANTA.NET({
+        el: "body",
+        mouseControls: true,
+        touchControls: true,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+      });
+    </script>
+
+    <!-- for custom  script file  -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>
