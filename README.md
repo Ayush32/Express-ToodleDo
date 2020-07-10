@@ -3,8 +3,6 @@
 
 ![](/images_for_github/nodejs-logo-png-file-node-js-logo-2015-svg-1280.png)![](/images_for_github/nodejs-logo-vector-png-express-js-logo-465.png) ![](/images_for_github/mongodb-png--400.png)  
 
-
-
 # How To Run
 
 * Install Node.js(nodejs.org).
